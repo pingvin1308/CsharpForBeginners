@@ -28,10 +28,6 @@ namespace BlackJack
                 11, // - туз
             };
 
-            int t = Convert.ToInt32("test");
-
-            
-
             cards = Shuffle(cards);
 
             for (int i = 0; i < cards.Length; i++)
@@ -144,9 +140,5 @@ namespace BlackJack
 
             return isPlayerContinue;
         }
-
-        // Методы всегда отражают действия. 
-        // Поэтому названия методов это глаголы
-
     }
 }
