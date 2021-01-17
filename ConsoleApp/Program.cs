@@ -1,153 +1,50 @@
 ﻿using System;
 using System.Text;
 
-namespace ConsoleApp
+namespace HomeTask2
 {
     class Program
     {
-        /// <summary>
-        /// Tests
-        /// </summary>
-        /// <param name="args"></param>
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            //byte age = 13;
+            byte byteNumber1 = 10;
+            byte byteNumber2 = 10;
+            byte maxByteNumber = 255;
+            byte minByteNumber = 0;
 
-            //if (age >= 14)
-            //{
-            //    Console.WriteLine("Вам уже можно работать :)");
-            //    Console.WriteLine("Но вам лучше еще учиться :)");
-            //}
-            //else if (age >= 18)
-            //{
-            //    Console.WriteLine("Вам уже пора работать :)");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Вам лучше еще учиться :)");
-            //}
+            byteNumber1 = (byte)(byteNumber1 + byteNumber2);
 
-            //string productCategory = "alcohol";
+            Console.WriteLine("Особенности арифметических операций для целых чисел");
 
-            //switch (productCategory)
-            //{
-            //    case "alcohol" when age >= 14 && age < 18:
-            //        Console.WriteLine("Вам еще мало лет");
-            //        break;
+            int maxIntNumber = 2147483647, minIntNumber = -2147483648, resultAddition = maxIntNumber + 10;
+            bool resultCompare = maxIntNumber > resultAddition;
+            Console.WriteLine($"(2147483647) > (2147483647+10): {resultCompare}");
+            Console.WriteLine($"(2147483647)(2147483647) + 10 = {resultAddition}");
 
-            //    case "alcohol" when age >= 18:
-            //    case "milk":
-            //        Console.WriteLine("Всего доброго");
-            //        break;
+            int resultSubtraction = minIntNumber - 10;
+            resultCompare = minIntNumber < resultSubtraction;
+            Console.WriteLine($"(-2147483648) > (-2147483648-10): {resultCompare}");
+            Console.WriteLine($"(-2147483648) - 10 = {resultSubtraction}");
 
-            //    default:
 
-            //        Console.WriteLine("Не хотели вы конфет?");
-            //        break;
-            //}
+            int resultMultiplication = maxIntNumber * 2;
+            resultCompare = maxIntNumber > resultMultiplication;
+            Console.WriteLine($"(2147483647) > (2147483647*2): {resultCompare}");
+            Console.WriteLine($"(2147483647) * 2 = {resultMultiplication}");
 
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    for (int j = 0; j < 5; j++)
-            //    {
-            //        Console.Write("[ ]");
-            //    }
+            Console.WriteLine("Особенности арифметических операций для вещественных чисел");
 
-            //    Console.WriteLine();
-            //}
+            float floatNumber = 0.1F + 0.2F;
+            decimal decimalNumber = 0.10M + 0.2M;
+            double doubleNumber = 0.1 + 0.2;
 
-            //bool isBoiled = false;
+            Console.WriteLine($"Тип double: 0.1 + 0.2 = {doubleNumber}");
+            Console.WriteLine($"Тип float: 0.1 + 0.2 = {floatNumber}");
+            Console.WriteLine($"Тип decimal: 0.1 + 0.2 = {decimalNumber}");
 
-            //int timer = 0;
-
-            //while (!isBoiled)
-            //{
-            //    Console.Write("[]");
-
-            //    if (timer == 20)
-            //    {
-            //        break;
-            //    }
-
-            //    if (timer == 100)
-            //    {
-            //        isBoiled = true;
-            //    }
-
-            //    timer++;
-
-            //    if (timer > 10)
-            //    {
-            //        Console.Write("[X]");
-            //        continue;
-            //    }
-            //}
-
-            //if(isBoiled)
-            //{
-            //    Console.WriteLine("Вода вскипела");
-            //}
-
-            //bool success = false;
-            //Console.WriteLine("Введите число от 1 до 10");
-
-            //do
-            //{
-            //    string answer = Console.ReadLine();
-            //    success = int.TryParse(answer, out int value);
-
-            //    if (value >= 1 && value <= 10)
-            //    {
-            //        Console.WriteLine("Вы ввели: " + value);
-            //    }
-
-            //    if(!success)
-            //    {
-            //        Console.WriteLine("Вы ввели не число!");
-            //    }
-
-            //} while (!success);
-
-            string[] names = new string[13];
-            byte[] ages = new byte[13];
-            string[] phoneNumbers = new string[13];
-
-            //names[0] = "Ivan";
-            //names[1] = "Maks K";
-            //names[2] = "alexrus";
-            //names[3] = "SS limit";
-            //names[4] = "Михаил";
-            //names[5] = "Sergey Escanor";
-
-            //Console.WriteLine("Введите ваше имя:");
-            //names[6] = Console.ReadLine();
-
-            //for (int i = 0; i < names.Length; i++)
-            //{
-            //    Console.WriteLine(names[i]);
-            //}
-
-            double a = 1;
-            double b = 2;
-
-            Console.WriteLine("");
-
-            double c;
-
-            int[] numbers = new int[10];
-            Random random = new Random();
-
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                numbers[i] = random.Next();
-            }
-
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                Console.WriteLine(numbers[i]);
-            }
+            Console.ReadKey();
         }
     }
 }
